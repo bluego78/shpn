@@ -25,5 +25,4 @@ export default () => {
                 }
                 </div>
             </AppContext.Provider>
-         
 }

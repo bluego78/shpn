@@ -49,6 +49,8 @@ it("Renders user data", async () => {
   expect(container.querySelector(".email").textContent).toBe(fakeUser.email);
   expect(container.querySelector(".picture").textContent).toBeInTheDocument;
   expect(container.querySelector(".nat-flag").textContent).toBeInTheDocument;
+  expect(container.querySelector(".userbadge-container").textContent).toBeInTheDocument;
+  
  
 
 });
