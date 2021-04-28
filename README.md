@@ -1,12 +1,25 @@
 # Sherpany Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), so you have to download the package, then open your terminal and do the command:
 
-## Available Scripts
+### `npm install`
 
-In the project directory, you can run:
+and then:
 
 ### `npm start`
+
+# What will you find in the app
+
+The folders structure:
+
+- node_modules
+- public
+- src
+- .env file (contains come environment variables)
+- .tsconfig.json (configuration for typescript)
+- other files: .gitignore, package.json package-lock.json
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
