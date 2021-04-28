@@ -5,15 +5,17 @@ import {createContext} from 'react';
 import IUser from '../Interfaces/IUser';
 import IAppContext from '../Interfaces/IAppContext';
 
-let selectedNationCookie : string | null = sessionStorage.getItem("selectednat");
+let selectedNationCookie : string | null = localStorage.getItem("selectednat");
 
 // Create the context
 const appContext: IAppContext | any = createContext({ 
     isLoading: false,
+    filterIsActive:false,
     usersList: [] as Array<IUser>,
+    filteredUsersList: [] as Array<IUser>,
     currentPage: 0,
     totalResults:0,
-    selectedNation: selectedNationCookie,
+    selectedNations: selectedNationCookie!==null ? selectedNationCookie.split(",") : []
 });
 
 export default appContext;

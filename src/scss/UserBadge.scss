@@ -1,8 +1,9 @@
-$borderColor: #eaeaea;
+$borderColor: #cfcfcf;
 $primaryColor: rgb(0, 140, 255);
 $lightColor:rgb(153, 153, 153);
 
 .userbadge-container{
+    position: relative;
     display:flex;
     flex-direction: column;
     justify-content: start;
@@ -10,12 +11,14 @@ $lightColor:rgb(153, 153, 153);
     border:1px solid $borderColor;
     padding:0.5rem;
     margin:8px;
-    min-width:190px;
+    width:220px;
+    height:130px;
     border-radius:5px;
 
     .picture
     {
         border-radius:50%;
+        cursor: pointer;
     }
 
     .username
@@ -28,5 +31,10 @@ $lightColor:rgb(153, 153, 153);
     {
         font-size:0.75rem;
         color:$primaryColor;
+    }
+
+    .nat-flag{
+        position: absolute;
+        margin-left:170px;
     }
 }

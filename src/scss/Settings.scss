@@ -1,0 +1,23 @@
+.nat-container{
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+
+    .nat-row
+    {
+        display: flex;
+        align-items: center;
+
+        input[type=checkbox]
+        {
+            margin-right:5px;
+        }
+    }
+
+    .back-button{
+        margin-top:30px;
+        width:130px;
+    }
+    
+    
+}

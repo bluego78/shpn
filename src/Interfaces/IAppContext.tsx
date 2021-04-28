@@ -3,8 +3,10 @@ import IUser from './IUser';
 
 export default interface IAppContext {
     isLoading:boolean;
+    filterIsActive:boolean;
     usersList: Array<IUser>;
+    filteredUsersList: Array<IUser>;
     currentPage: number;
     totalResults:number;
-    selectedNation: string | null;
+    selectedNations: Array<string>;
 }

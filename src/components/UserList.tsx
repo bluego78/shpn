@@ -15,11 +15,12 @@ import IFetchUserResponse from '../Interfaces/IFetchUserResponse';
 import UserBadge from './UserBadge';
 import Loader from './Loader';
 import EndList from './EndList';
+import Message from './Message';
 
 /* IMPORT HELPERS */
 import { fetchUser } from '../helpers/Fetch';
 
-export default () => {
+export default (props:any) => {
 
     // *isLoading* indicates if is doing a call
     const [isLoading, setIsLoading] = useState(false);
@@ -88,7 +89,7 @@ export default () => {
 
             // Update the context if you haven't shown all the users yet
             if(appContext.usersList.length<parseInt(process.env.REACT_APP_MAX_USER_LOAD as string,10))
-            setAppContext({...appContext, usersList: newList, currentPage: nextPage});
+            setAppContext({...appContext, usersList: newList, filteredUsersList: newList, currentPage: nextPage});
 
             // verify if you have reached the limit of users to load
             if(newList.length<parseInt(process.env.REACT_APP_MAX_USER_LOAD as string,10))
@@ -103,28 +104,35 @@ export default () => {
     const handleScroll = async (e : any) => {
         // Mesures the height of the element scrolled and if the scroll position matches to the end
         const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-        if (bottom) { 
+        if (bottom && !appContext.filterIsActive) { 
             await loadUsers();
          }
       }
-
+      
     useEffect(()=>{
         // To await an async function into the useEffect you have to nested it 
         // into an another async function and call it, because useEffect id not async
         // so you can't use the await
         (async()=>{
-            // Load the first batch of users
+            // Load the first batch of users only the first time
+            //if(appContext.currentPage===0)
             await loadUsers();
         })();
+
+        //Show the search field if hidden by the settings page
+        var myElement: HTMLInputElement = document.getElementById('SearchField') as HTMLInputElement;
+        myElement.classList.remove("d-none");
+
     },[]);
 
     return <Fragment>
-                <div className="users-list pb-5" onScroll={(e)=>handleScroll(e)}>
-                    {appContext.usersList.map((user:IUser, index:number) => {
+                {appContext.filterIsActive && <Message txt="A filter is active, you cannot load more users during search." />}
+                <div className="users-list" onScroll={(e)=>handleScroll(e)}>
+                    {appContext.filteredUsersList.map((user:IUser, index:number) => {
                         return <UserBadge key={index} user={user} />
                     })}
                     {isLoading && <Loader /> }
-                    {(appContext.usersList.length >= parseInt(process.env.REACT_APP_MAX_USER_LOAD as string, 10)) && <EndList /> }
+                    {(appContext.usersList.length >= parseInt(process.env.REACT_APP_MAX_USER_LOAD as string, 10)) && !appContext.filterIsActive && <EndList /> }
                 </div>
             </Fragment>
 }
