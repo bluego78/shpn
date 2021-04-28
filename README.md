@@ -37,4 +37,6 @@ Unfortunately, it's hard to test, this is why you'll find less tests, because i 
 
 I used bootstrap for some css class and for the gear icon, but i wrote the biggest part of the css.
 
+I didn't use any components to get the Infinite Scroll, because I just want to show my skills.
+
 # Hope you'll enjoy, let me know!
