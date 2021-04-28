@@ -2,6 +2,7 @@ $borderColor: #cfcfcf;
 $primaryColor: rgb(0, 140, 255);
 $lightColor:rgb(153, 153, 153);
 
+
 .userbadge-container{
     position: relative;
     display:flex;
@@ -12,7 +13,7 @@ $lightColor:rgb(153, 153, 153);
     padding:0.5rem;
     margin:8px;
     width:220px;
-    height:130px;
+    height:130px !important;
     border-radius:5px;
 
     .picture
