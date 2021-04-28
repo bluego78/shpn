@@ -13,8 +13,19 @@ and then:
 The folders structure:
 
 - node_modules
-- public
-- src
+- public (where you can find the index.html file)
+- src (the main directory, where you can find every component)
+    
+    Let's go deeply into src folder:
+    
+    - components (all the react components are here)
+    - contexts (here is the context i used to manage the state)
+    - helpers (I use to put here files with common functionalities, tools, etc..)
+    - imgs (guess... :-))
+    - interfaces (here are all the Interfaces I've implemented to typize the objects)
+    - scss (yes the scss are here)
+    - tests (some test i wrote)
+    
 - .env file (contains come environment variables)
 - .tsconfig.json (configuration for typescript)
 - other files: .gitignore, package.json package-lock.json
