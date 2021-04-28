@@ -9,4 +9,5 @@ export default interface IAppContext {
     currentPage: number;
     totalResults:number;
     selectedNations: Array<string>;
+    modalIsOpened:boolean;
 }

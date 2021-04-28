@@ -3,8 +3,55 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding:1rem;
     overflow-y: auto;
     overflow-x: none;
+
+    .badge-container{
+        cursor: pointer;
+    }
+    
+}
+
+.modal-content
+{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:none !important;
+    
+
+    .contacts-details
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 0.9rem;
+
+        .address-details-label{
+            flex-basis: 100%;
+            font-weight: 500;
+            text-align:right;
+            padding-right:5px;
+        }
+
+        .address-details-text{
+            flex-basis: 100%;
+            margin-right:5px;
+            min-width: 100px;
+            padding-left:5px;
+        }
+
+       
+    }
+
+    .btn-close-modal
+    {
+        margin-top:20px;
+    }
 }

@@ -3,6 +3,7 @@ import '../scss/UserList.scss';
 
 /* IMPORT NODE MODULES & COMPONENTS*/
 import { Fragment, useContext, useEffect, useState } from 'react';
+import Modal from 'react-modal';
 
 /* IMPORT CONTEXTS */
 import AppContext from '../contexts/AppContext';
@@ -30,6 +31,23 @@ export default (props:any) => {
 
     // *preFetched* is a list where to put the next batch of users to append to the list
     const [preFetched, setPreFetched] = useState([] as Array<IUser>);
+
+    // *userSelected* is where we put the user clicked that we want to show details
+    const [userSelected, setUserSelected] = useState<IUser | null>(null);
+
+    //CSS-in-JS Styles for the modal
+    const modalStyles = {
+        content : {
+          top                   : '50%',
+          left                  : '50%',
+          right                 : 'auto',
+          bottom                : 'auto',
+          marginRight           : '-50%',
+          borderRadius          : '10px',
+          minWidth              : '320px',
+          transform             : 'translate(-50%, -50%)'
+        }
+      };
 
     // *loadUsers* do this:
     // it verify if you havent reached the maximum number of users to load
@@ -108,6 +126,11 @@ export default (props:any) => {
             await loadUsers();
          }
       }
+
+      const openUserModal = (user:IUser) => {
+        setAppContext({...appContext, modalIsOpened:true});
+        setUserSelected(user);
+      }
       
     useEffect(()=>{
         // To await an async function into the useEffect you have to nested it 
@@ -129,10 +152,51 @@ export default (props:any) => {
                 {appContext.filterIsActive && <Message txt="A filter is active, you cannot load more users during search." />}
                 <div className="users-list" onScroll={(e)=>handleScroll(e)}>
                     {appContext.filteredUsersList.map((user:IUser, index:number) => {
-                        return <UserBadge key={index} user={user} />
+                        return <div key={index} className="badge-container" onClick={()=>openUserModal(user)} ><UserBadge user={user} /></div>
                     })}
                     {isLoading && <Loader /> }
                     {(appContext.usersList.length >= parseInt(process.env.REACT_APP_MAX_USER_LOAD as string, 10)) && !appContext.filterIsActive && <EndList /> }
                 </div>
+
+                <Modal
+                    isOpen={appContext.modalIsOpened}
+                    /*onAfterOpen={afterOpenModal}
+                    onRequestClose={closeModal}*/
+                    style={modalStyles}
+                    contentLabel="Example Modal"
+                    ariaHideApp={false}
+                    >
+                        <div className="modal-content">
+                                <UserBadge user={userSelected} />
+                                <hr />
+                                <div className="contacts-details">
+                                    <div className="address-details-label">Address: </div>
+                                    <div className="address-details-text">{userSelected?.location.street.number}, {userSelected?.location.street.name}</div>
+                                </div>
+                                <div className="contacts-details">
+                                    <div className="address-details-label">City: </div>
+                                    <div className="address-details-text">{userSelected?.location.city}</div>
+                                </div>
+                                <div className="contacts-details">
+                                    <div className="address-details-label">State: </div>
+                                    <div className="address-details-text">{userSelected?.location.state}</div>
+                                </div>
+                                <div className="contacts-details">
+                                    <div className="address-details-label">Zip code: </div>
+                                    <div className="address-details-text">{userSelected?.location.postcode}</div>
+                                </div>
+                                <div className="contacts-details">
+                                    <div className="address-details-label">Phone: </div>
+                                    <div className="address-details-text">{userSelected?.phone}</div>
+                                </div>
+                                <div className="contacts-details">
+                                    <div className="address-details-label">Cell: </div>
+                                    <div className="address-details-text">{userSelected?.cell}</div>
+                                </div>
+                                <hr />
+                                <button className="btn btn-primary btn-close-modal" onClick={()=>{setAppContext({...appContext, modalIsOpened:false});}}>CLOSE</button>
+                        </div>
+                        
+                </Modal>
             </Fragment>
 }

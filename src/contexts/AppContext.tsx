@@ -15,7 +15,8 @@ const appContext: IAppContext | any = createContext({
     filteredUsersList: [] as Array<IUser>,
     currentPage: 0,
     totalResults:0,
-    selectedNations: selectedNationCookie!==null ? selectedNationCookie.split(",") : []
+    selectedNations: selectedNationCookie!==null ? selectedNationCookie.split(",") : [],
+    modalIsOpened:false,
 });
 
 export default appContext;
