@@ -1,0 +1,24 @@
+$backgroundColor: rgba(255, 255, 255, 0.7);
+.loader{
+    padding:10px 0px 10px 0px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    background-color:$backgroundColor;
+    z-index: 1000;
+    bottom:0px;
+
+    .loader-badge{
+        background-color: dodgerblue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:3px 10px 3px 5px;
+        border-radius:30px;
+        font-size:0.8rem;
+    font-weight: 400;
+    }
+}

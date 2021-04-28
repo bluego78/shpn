@@ -1,0 +1,26 @@
+$textColor: grey;
+$dotColor: rgb(168, 168, 168);
+.end-list{
+    padding:10px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    z-index: 1000;
+    bottom:0px;
+    font-size:0.7rem;
+    color:$textColor;
+
+    .dot{
+        background-color: $dotColor;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        margin-right: 2px;
+    }
+
+    .text{
+        margin-left:5px;
+    }
+
+}

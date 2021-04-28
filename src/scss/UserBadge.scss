@@ -1,0 +1,32 @@
+$borderColor: #eaeaea;
+$primaryColor: rgb(0, 140, 255);
+$lightColor:rgb(153, 153, 153);
+
+.userbadge-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border:1px solid $borderColor;
+    padding:0.5rem;
+    margin:8px;
+    min-width:190px;
+    border-radius:5px;
+
+    .picture
+    {
+        border-radius:50%;
+    }
+
+    .username
+    {
+        font-size:0.8rem;
+        color: $lightColor;
+    }
+
+    .email
+    {
+        font-size:0.75rem;
+        color:$primaryColor;
+    }
+}
