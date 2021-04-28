@@ -1,6 +1,3 @@
-/* IMPORT CSS */
-import '../scss/App.scss';
-
 /* IMPORT NODE MODULES & COMPONENTS */
 import { useContext } from 'react';
 

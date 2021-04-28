@@ -34,7 +34,7 @@ export default (props:any) => {
     return <div className="userbadge-container">
             <div className="nat-flag"><img alt="" src={getIcon(user.nat)} /></div>
             <img className="picture" alt={`${user.name.first} ${user.name.last} picture`} src={user.picture.thumbnail} />
-            <div>{user.name.first} {user.name.last}</div>
+            <div className="fullname">{user.name.first} {user.name.last}</div>
             <div className="username">{user.login.username}</div>
             <div className="email">{user.email}</div>
         </div>
