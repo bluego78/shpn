@@ -1,6 +1,6 @@
 # Sherpany Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), so you have to download the package, then open your terminal and do the command:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), so you have to download/clone the package, go to your local folder by terminal and do the command:
 
 ### `npm install`
 
