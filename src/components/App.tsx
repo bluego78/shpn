@@ -17,7 +17,7 @@ export default () => {
     const [appContext, setAppContext] = useState(useContext(AppContext) as IAppContext);
     
     return <AppContext.Provider value={[appContext, setAppContext]}>
-                <div className="content-fluid d-flex flex-column align-items-center justify-content-center">
+                <div id="app-container" className="content-fluid d-flex flex-column align-items-center justify-content-center">
                 {appContext.isLoading && appContext.currentPage===0 ? 
                 <Loader />
                 : 
