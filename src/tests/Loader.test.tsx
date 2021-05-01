@@ -1,28 +1,15 @@
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-
+import { shallow } from 'enzyme';
 import Loader from '../components/Loader';
 
-let container:any = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
-
 //It's a simple component we can just test if it renders
-it("Loader renders", () => {
-    act(() => {
-        render(<Loader />, container);
-    });
-    expect(container.querySelector(".loader").textContent).toBeInTheDocument;
-    expect(container.querySelector(".loader-badge").textContent).toBeInTheDocument;
-    expect(container.querySelector(".spinner-border").textContent).toBeInTheDocument;
+describe('<Loader />',()=>{
+
+      it("<Loader /> renders all the elements", () => {
+          let wrapper = shallow(<Loader />);
+          expect(wrapper.length).toBe(1);
+          expect(wrapper.find(".loader").length).toBe(1);
+          expect(wrapper.find(".loader-badge").length).toBe(1);
+          expect(wrapper.find(".spinner-border").length).toBe(1);
+      });
+
 });

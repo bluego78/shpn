@@ -1,35 +1,18 @@
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-
+import { shallow } from 'enzyme';
 import Message from '../components/Message';
 
-let container:any = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
-
 //It's a simple component we can just test if it renders
+describe('<Message />',()=>{
 
-it("Message renders with or without txt", () => {
-    
-    act(() => {
-      render(<Message txt="Waring this is a message" />, container);
-    });
-    expect(container.textContent).toBe("Waring this is a message");
-
-    act(() => {
-        render(<Message />, container);
+      it("<Message /> renders if txt not passed", () => {
+          let wrapper = shallow(<Message />);
+          expect(wrapper.length).toBe(1);
+          expect(wrapper.find(".message").html()).toEqual(`<div class="message"></div>`);
       });
-      expect(container.textContent).toBe("");
-  
-});
 
+      it("<Message /> renders if txt passed", () => {
+          let wrapper = shallow(<Message txt={"test"} />);
+          expect(wrapper.length).toBe(1);
+          expect(wrapper.find(".message").html()).toEqual(`<div class="message">test</div>`);
+      });
+});

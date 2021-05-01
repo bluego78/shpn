@@ -1,28 +1,16 @@
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-
+import { shallow } from 'enzyme';
 import EndList from '../components/EndList';
 
-let container:any = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
-
 //It's a simple component we can just test if it renders
-it("EndList renders", () => {
-    
-    act(() => {
-      render(<EndList />, container);
-    });
-    expect(container.textContent).toBe("End of users catalog");
-});
+describe('<EndList />',()=>{
 
+      it("<EndList /> renders all the elements", () => {
+          let wrapper = shallow(<EndList />);
+          expect(wrapper.length).toBe(1);
+          expect(wrapper.find(".end-list").length).toBe(1);
+          expect(wrapper.find(".dot").length).toBe(3);
+          expect(wrapper.find(".text").length).toBe(1);
+          expect(wrapper.find(".text").html()).toEqual(`<div class="text">End of users catalog</div>`);
+      });
+
+}); 
