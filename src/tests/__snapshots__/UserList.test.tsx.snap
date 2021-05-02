@@ -16,7 +16,7 @@ exports[`<UserList /> <UserList /> renders the user list 1`] = `
         className="nat-flag"
       >
         <img
-          alt=""
+          alt="John Doe picture"
           src="ch.png"
         />
       </div>

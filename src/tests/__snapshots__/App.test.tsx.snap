@@ -24,7 +24,7 @@ exports[`<App /> <App /> renders all the elements 1`] = `
     >
       <input
         aria-label="Search"
-        className="form-control mr-sm-2"
+        className="search-field form-control mr-sm-2"
         id="SearchField"
         onChange={[Function]}
         placeholder="Search"
@@ -72,7 +72,7 @@ exports[`<App /> <App /> renders all the elements 1`] = `
             className="nat-flag"
           >
             <img
-              alt=""
+              alt="John Doe picture"
               src="ch.png"
             />
           </div>

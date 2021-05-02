@@ -56,7 +56,7 @@ export default () => {
     return <div className="navbar navbar-light bg-light w-100 d-flex justify-content-center justify-content-md-between">
               <Link to="/" className="navbar-brand d-none d-md-inline"><img className="logo" src={Logo} alt="Sherpany Logo" /></Link>
               <div className="d-flex justify-content-center justify-content-md-between align-items-center">
-                <input id="SearchField" className="form-control mr-sm-2" type="search" onChange={(e)=>search(e)} placeholder="Search" aria-label="Search" />
+                <input id="SearchField" className="search-field form-control mr-sm-2" type="search" onChange={(e)=>search(e)} placeholder="Search" aria-label="Search" />
                 <Link to="/settings" title="Settings" className="settings-link"><Gear className="gear-icon" /></Link>
               </div>
             </div>

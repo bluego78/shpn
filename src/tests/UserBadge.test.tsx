@@ -3,12 +3,23 @@ import IUser from '../Interfaces/IUser';
 import { shallow } from 'enzyme';
 import { fakeUsers } from '../contexts/MockAppContext';
 
+
+let wrapper:any;
+const fakeUser = fakeUsers[0];
+
+beforeEach(()=>{
+  wrapper = shallow(<UserBadge user={fakeUser} />);
+});
+
+afterEach(()=>{
+  wrapper = null;
+});
+
 describe('<UserBadge />',()=>{
 
     it("<UserBadge /> renders all elements & data", async () => {
 
-        let fakeUser = fakeUsers[0];
-        let wrapper = shallow(<UserBadge user={fakeUser} />);
+        
         expect(wrapper.length).toBe(1);
         expect(wrapper.find(".picture").length).toBe(1);
         expect(wrapper.find(".nat-flag").length).toBe(1);
@@ -20,6 +31,11 @@ describe('<UserBadge />',()=>{
         expect(wrapper.find(".email").length).toBe(1);
         expect(wrapper.find(".email").html()).toEqual(`<div class="email">${fakeUser.email}</div>`);
       
+      });
+
+      it('<UserBadge /> getIcon function works correctly',()=>{
+        expect(wrapper.find(".nat-flag").length).toBe(1);
+        expect(wrapper.find(".nat-flag").html()).toContain('src="ch.png"');
       });
 
 });
