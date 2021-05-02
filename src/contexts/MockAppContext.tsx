@@ -22,7 +22,7 @@ export const fakeUsers = [
     }
 ];
 
-const fakeContext = {...AppContext, usersList: fakeUsers, filteredUsersList: fakeUsers};
+const fakeContext = {...AppContext, usersList: fakeUsers, filteredUsersList: fakeUsers, selectedNations:['ch'] };
 
 export const MockedContextState = ({children}:any)=> {
     const [appState, setAppState] = useState(fakeContext);

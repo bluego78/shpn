@@ -2,12 +2,7 @@
 import { MockedContextState } from '../contexts/MockAppContext';
 import NavBar from '../components/NavBar';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route, Link
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 describe('<NavBar />', ()=>{
 

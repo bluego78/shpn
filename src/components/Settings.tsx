@@ -63,9 +63,11 @@ export default () => {
     useEffect(()=>{
 
         //Empty and hide the search field when go to the settings page
-        var myElement: HTMLInputElement = document.getElementById('SearchField') as HTMLInputElement;
-        myElement.value="";
-        myElement.classList.add("d-none");
+        var searchField: HTMLInputElement = document.getElementById('SearchField') as HTMLInputElement;
+        if(searchField){
+            searchField.value="";
+            searchField?.classList.add("d-none");
+        }
 
     },[])
 

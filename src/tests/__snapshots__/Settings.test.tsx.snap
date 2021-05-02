@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Settings /> <Settings /> renders correctly 1`] = `
+<div
+  className="nat-container"
+>
+  <h3>
+    Available Nationalities
+  </h3>
+  <p>
+    Please, select the nationalities you want to filter.
+  </p>
+  <div
+    className="nat-row"
+  >
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="CH"
+    />
+    Switzerland
+     (
+    CH
+    )
+  </div>
+  <div
+    className="nat-row"
+  >
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="ES"
+    />
+    Spain
+     (
+    ES
+    )
+  </div>
+  <div
+    className="nat-row"
+  >
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="FR"
+    />
+    France
+     (
+    FR
+    )
+  </div>
+  <div
+    className="nat-row"
+  >
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value="GB"
+    />
+    Britain
+     (
+    GB
+    )
+  </div>
+  <a
+    className="btn btn-primary back-button"
+    href="/home"
+    onClick={[Function]}
+  >
+    back
+  </a>
+</div>
+`;
