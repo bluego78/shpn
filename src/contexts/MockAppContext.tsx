@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import AppContext from './AppContext';
 
-const fakeUsers = [
+export const fakeUsers = [
     {
         id: {value:"XX123"},
         login: { username:"theusername" },
