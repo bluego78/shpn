@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> <Home /> renders all the elements 1`] = `
+<div
+  className="content-fluid d-flex flex-column align-items-center justify-content-center"
+>
+  <div
+    className="users-list"
+    onScroll={[Function]}
+  >
+    <div
+      className="badge-container"
+      onClick={[Function]}
+    >
+      <div
+        className="userbadge-container"
+      >
+        <div
+          className="nat-flag"
+        >
+          <img
+            alt="John Doe picture"
+            src="ch.png"
+          />
+        </div>
+        <img
+          alt="John Doe picture"
+          className="picture"
+          src="https://randomuser.me/api/portraits/thumb/men/56.jpg"
+        />
+        <div
+          className="fullname"
+        >
+          John
+           
+          Doe
+        </div>
+        <div
+          className="username"
+        >
+          theusername
+        </div>
+        <div
+          className="email"
+        >
+          test@example.com
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Home /> <Home /> renders correctly 1`] = `
+<div
+  className="content-fluid d-flex flex-column align-items-center justify-content-center"
+>
+  <div
+    className="users-list"
+    onScroll={[Function]}
+  >
+    <div
+      className="badge-container"
+      onClick={[Function]}
+    >
+      <div
+        className="userbadge-container"
+      >
+        <div
+          className="nat-flag"
+        >
+          <img
+            alt="John Doe picture"
+            src="ch.png"
+          />
+        </div>
+        <img
+          alt="John Doe picture"
+          className="picture"
+          src="https://randomuser.me/api/portraits/thumb/men/56.jpg"
+        />
+        <div
+          className="fullname"
+        >
+          John
+           
+          Doe
+        </div>
+        <div
+          className="username"
+        >
+          theusername
+        </div>
+        <div
+          className="email"
+        >
+          test@example.com
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,20 +1,18 @@
-import { MockedContext } from '../contexts/MockAppContext';
-import App from '../components/App';
+import { MockedContextState } from '../contexts/MockAppContext';
+import Home from '../components/Home';
 import renderer from 'react-test-renderer';
 
-describe('<App />', ()=>{
+describe('<Home />', ()=>{
 
-    it('<App /> renders all the elements', ()=>{
+    it('<Home /> renders all the elements', ()=>{
         
         let component = renderer.create(
-            <MockedContext>
-                <App />
-            </MockedContext>
+            <MockedContextState>
+                <Home />
+            </MockedContextState>
           );
 
         expect(component.toJSON()).toMatchSnapshot();
-        expect(component.root.findByProps({id: "app-container"})).toBeTruthy(); 
-        expect(component.root.findByProps({id: "SearchField"})).toBeTruthy(); 
         expect(component.root.findByProps({className: "users-list"})).toBeTruthy(); 
         expect(component.root.findByProps({className: "badge-container"})).toBeTruthy(); 
         expect(component.root.findByProps({className: "userbadge-container"})).toBeTruthy(); 
@@ -23,7 +21,6 @@ describe('<App />', ()=>{
         expect(component.root.findByProps({className: "fullname"})).toBeTruthy(); 
         expect(component.root.findByProps({className: "username"})).toBeTruthy(); 
         expect(component.root.findByProps({className: "email"})).toBeTruthy(); 
-        
 
     });
 
