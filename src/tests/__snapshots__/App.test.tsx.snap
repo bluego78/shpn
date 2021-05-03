@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> <App /> renders all the elements 1`] = `
+exports[`<App /> Renders properly 1`] = `
 <div
   className="content-fluid d-flex flex-column align-items-center justify-content-center"
   id="app-container"
