@@ -1,7 +1,14 @@
+$HighlightColor: dodgerblue;
+
 .logo{
     height:30px;
 }
 
 .gear-icon{
     margin-left:5px;
+}
+
+.subtitle{
+    color:$HighlightColor;
+    margin-right:10px;
 }

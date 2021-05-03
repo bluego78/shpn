@@ -1,6 +1,6 @@
 import {fetchUser} from '../helpers/Fetch';
 
-export default describe('Test Fetches', ()=>{
+export default describe('<Fetch />', ()=>{
     
     //Set the old env
     const OLD_ENV = process.env;
@@ -14,7 +14,7 @@ export default describe('Test Fetches', ()=>{
         process.env = OLD_ENV; // Restore old environment
     });
 
-    it('Check the fetchUser response', async () => {
+    it('the response matches the IFetchResponseInfo interface', async () => {
 
         //Get the parameters from the environment file
         process.env.REACT_APP_RANDOMUSER_URL='https://randomuser.me/api/'

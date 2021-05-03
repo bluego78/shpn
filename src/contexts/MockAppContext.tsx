@@ -46,7 +46,19 @@ export const MockedContextState = ({children}:any)=> {
     return <AppContext.Provider value={[appState, setAppState]}>{children}</AppContext.Provider>;
 }
 
+export const MockedContextStateLoading = ({children}:any)=> {
+    let fakeContext = {...AppContext, isLoading:true, currentPage:0 };
+    const [appState, setAppState] = useState(fakeContext);
+    return <AppContext.Provider value={[appState, setAppState]}>{children}</AppContext.Provider>;
+}
+
+
 export const MockedContext = ({children}:any)=> {
+    return <AppContext.Provider value={fakeContext}>{children}</AppContext.Provider>;
+}
+
+export const MockedContextLoading = ({children}:any)=> {
+    let fakeContext = {...AppContext, isLoading:true, currentPage:0 };
     return <AppContext.Provider value={fakeContext}>{children}</AppContext.Provider>;
 }
 

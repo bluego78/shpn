@@ -1,5 +1,4 @@
 /* IMPORT NODE MODULES & COMPONENTS */
-import {Fragment} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -16,7 +15,7 @@ import Settings from './Settings';
 export default (props:any) => {
 
     return (
-        <Fragment>
+        <div className="layout">
             <Router>
                 <NavBar />
                 <Switch>
@@ -25,6 +24,6 @@ export default (props:any) => {
                     <Route path='/settings' exact render={(props) => <Settings />} />
                 </Switch>
             </Router>
-        </Fragment>
+        </div>
     );
 }

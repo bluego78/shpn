@@ -153,11 +153,11 @@ export default (props:any) => {
     return <Fragment>
                 {appContext.filterIsActive && <Message txt="A filter is active, you cannot load more users during search." />}
                 <div className="users-list" onScroll={(e)=>handleScroll(e)}>
-                    {appContext.filteredUsersList.map((user:IUser, index:number) => {
+                    {appContext.filteredUsersList!==undefined && appContext.filteredUsersList.map((user:IUser, index:number) => {
                         return <div key={index} className="badge-container" onClick={()=>openUserModal(user)} ><UserBadge user={user} /></div>
                     })}
                     {isLoading && <Loader /> }
-                    {(appContext.usersList.length >= parseInt(process.env.REACT_APP_MAX_USER_LOAD as string, 10)) && !appContext.filterIsActive && <EndList /> }
+                    {(appContext.usersList!==undefined && appContext.usersList.length >= parseInt(process.env.REACT_APP_MAX_USER_LOAD as string, 10)) && !appContext.filterIsActive && <EndList /> }
                 </div>
 
                 <Modal

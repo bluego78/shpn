@@ -3,17 +3,18 @@
 exports[`<NavBar /> renders properly 1`] = `
 <div
   className="navbar navbar-light bg-light w-100 d-flex justify-content-center justify-content-md-between"
+  id="navbar"
 >
   <a
     className="navbar-brand d-none d-md-inline"
     href="/"
     onClick={[Function]}
   >
-    <img
-      alt="Sherpany Logo"
-      className="logo"
-      src="logo.svg"
-    />
+    <span
+      className="subtitle"
+    >
+      UserList Code Challenge
+    </span>
   </a>
   <div
     className="d-flex justify-content-center justify-content-md-between align-items-center"

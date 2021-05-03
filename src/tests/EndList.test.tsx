@@ -4,7 +4,7 @@ import EndList from '../components/EndList';
 //It's a simple component we can just test if it renders
 describe('<EndList />',()=>{
 
-      it("<EndList /> renders all the elements", () => {
+      it("Renders properly", () => {
           let wrapper = shallow(<EndList />);
           expect(wrapper.length).toBe(1);
           expect(wrapper.find(".end-list").length).toBe(1);

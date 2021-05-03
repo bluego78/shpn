@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Settings /> <Settings /> renders correctly 1`] = `
+exports[`<Settings /> Renders properly 1`] = `
 <div
   className="nat-container"
 >

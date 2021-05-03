@@ -1,9 +1,6 @@
 /* IMPORT CSS */
 import '../scss/NavBar.scss';
 
-/* IMPORT IMAGES */
-import Logo from '../imgs/logo.svg';
-
 /* IMPORT NODE MODULES & COMPONENTS*/
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -53,8 +50,8 @@ export default () => {
       setAppContext({...appContext, filteredUsersList: newFilteredUserList, filterIsActive});
     }
 
-    return <div className="navbar navbar-light bg-light w-100 d-flex justify-content-center justify-content-md-between">
-              <Link to="/" className="navbar-brand d-none d-md-inline"><img className="logo" src={Logo} alt="Sherpany Logo" /></Link>
+    return <div id="navbar" className="navbar navbar-light bg-light w-100 d-flex justify-content-center justify-content-md-between">
+              <Link to="/" className="navbar-brand d-none d-md-inline"><span className="subtitle">UserList Code Challenge</span></Link>
               <div className="d-flex justify-content-center justify-content-md-between align-items-center">
                 <input id="SearchField" className="search-field form-control mr-sm-2" type="search" onChange={(e)=>search(e)} placeholder="Search" aria-label="Search" />
                 <Link to="/settings" title="Settings" className="settings-link"><Gear className="gear-icon" /></Link>

@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Home /> <Home /> renders all the elements 1`] = `
+exports[`<Home /> when context is loaded Renders properly 1`] = `
 <div
   className="content-fluid d-flex flex-column align-items-center justify-content-center"
+  id="home"
 >
   <div
     className="users-list"
