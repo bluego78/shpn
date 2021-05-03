@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<UserList /> <UserList /> renders the user list 1`] = `
+exports[`<UserList /> Renders properly 1`] = `
 <div
   className="users-list"
   onScroll={[Function]}
@@ -41,6 +41,45 @@ exports[`<UserList /> <UserList /> renders the user list 1`] = `
         className="email"
       >
         test@example.com
+      </div>
+    </div>
+  </div>
+  <div
+    className="badge-container"
+    onClick={[Function]}
+  >
+    <div
+      className="userbadge-container"
+    >
+      <div
+        className="nat-flag"
+      >
+        <img
+          alt="John Smith picture"
+          src="gb.png"
+        />
+      </div>
+      <img
+        alt="John Smith picture"
+        className="picture"
+        src="https://randomuser.me/api/portraits/thumb/men/57.jpg"
+      />
+      <div
+        className="fullname"
+      >
+        John
+         
+        Smith
+      </div>
+      <div
+        className="username"
+      >
+        anotherusername
+      </div>
+      <div
+        className="email"
+      >
+        test2@example.com
       </div>
     </div>
   </div>

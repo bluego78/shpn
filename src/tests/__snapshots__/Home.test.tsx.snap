@@ -47,18 +47,6 @@ exports[`<Home /> <Home /> renders all the elements 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
-`;
-
-exports[`<Home /> <Home /> renders correctly 1`] = `
-<div
-  className="content-fluid d-flex flex-column align-items-center justify-content-center"
->
-  <div
-    className="users-list"
-    onScroll={[Function]}
-  >
     <div
       className="badge-container"
       onClick={[Function]}
@@ -70,31 +58,31 @@ exports[`<Home /> <Home /> renders correctly 1`] = `
           className="nat-flag"
         >
           <img
-            alt="John Doe picture"
-            src="ch.png"
+            alt="John Smith picture"
+            src="gb.png"
           />
         </div>
         <img
-          alt="John Doe picture"
+          alt="John Smith picture"
           className="picture"
-          src="https://randomuser.me/api/portraits/thumb/men/56.jpg"
+          src="https://randomuser.me/api/portraits/thumb/men/57.jpg"
         />
         <div
           className="fullname"
         >
           John
            
-          Doe
+          Smith
         </div>
         <div
           className="username"
         >
-          theusername
+          anotherusername
         </div>
         <div
           className="email"
         >
-          test@example.com
+          test2@example.com
         </div>
       </div>
     </div>

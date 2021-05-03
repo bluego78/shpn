@@ -143,8 +143,10 @@ export default (props:any) => {
         })();
 
         //Show the search field if hidden by the settings page
-        var myElement: HTMLInputElement = document.getElementById('SearchField') as HTMLInputElement;
-        myElement.classList.remove("d-none");
+        if(document.getElementById('SearchField')){
+            var myElement: HTMLInputElement = document.getElementById('SearchField') as HTMLInputElement;
+            myElement.classList.remove("d-none");
+        }
 
     },[]);
 

@@ -17,7 +17,24 @@ export const fakeUsers = [
                     country:"Switzerland", 
                     postcode:"6830", 
                     state:"-",
-                    street: {name:"C.so San Gottardo", number:"15",}
+                    street: {name:"C.so San Gottardo", number:"15"}
+                }
+    },
+    {
+        id: {value:"YY456"},
+        login: { username:"anotherusername" },
+        email:"test2@example.com",
+        name: {first:"John", last:"Smith"},
+        nat:"gb",
+        picture: { thumbnail:"https://randomuser.me/api/portraits/thumb/men/57.jpg" },
+        phone:"+44 12 44444444",
+        cell:"+44 23 55555555",
+        location: {
+                    city:"London", 
+                    country:"Britain", 
+                    postcode:"1234", 
+                    state:"-",
+                    street: {name:"Par Street", number:"10"}
                 }
     }
 ];

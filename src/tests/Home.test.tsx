@@ -13,14 +13,14 @@ describe('<Home />', ()=>{
           );
 
         expect(component.toJSON()).toMatchSnapshot();
-        expect(component.root.findByProps({className: "users-list"})).toBeTruthy(); 
-        expect(component.root.findByProps({className: "badge-container"})).toBeTruthy(); 
-        expect(component.root.findByProps({className: "userbadge-container"})).toBeTruthy(); 
-        expect(component.root.findByProps({className: "nat-flag"})).toBeTruthy(); 
-        expect(component.root.findByProps({className: "picture"})).toBeTruthy(); 
-        expect(component.root.findByProps({className: "fullname"})).toBeTruthy(); 
-        expect(component.root.findByProps({className: "username"})).toBeTruthy(); 
-        expect(component.root.findByProps({className: "email"})).toBeTruthy(); 
+        expect(component.root.findAllByProps({className: "users-list"})).toHaveLength(1); 
+        expect(component.root.findAllByProps({className: "badge-container"}).length).toBe(2); 
+        expect(component.root.findAllByProps({className: "userbadge-container"}).length).toBe(2);
+        expect(component.root.findAllByProps({className: "nat-flag"}).length).toBe(2);
+        expect(component.root.findAllByProps({className: "picture"}).length).toBe(2);
+        expect(component.root.findAllByProps({className: "fullname"}).length).toBe(2);
+        expect(component.root.findAllByProps({className: "username"}).length).toBe(2);
+        expect(component.root.findAllByProps({className: "email"}).length).toBe(2);
 
     });
 

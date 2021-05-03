@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NavBar /> <NavBar /> renders the field and the settings icon 1`] = `
+exports[`<NavBar /> renders properly 1`] = `
 <div
   className="navbar navbar-light bg-light w-100 d-flex justify-content-center justify-content-md-between"
 >
