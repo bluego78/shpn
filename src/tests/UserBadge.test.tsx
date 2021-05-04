@@ -26,6 +26,7 @@ describe('<UserBadge />',()=>{
 
     it("Renders the country flag", async () => {
         expect(wrapper.find(".nat-flag").length).toBe(1);
+        expect(wrapper.find(".nat-flag").html()).toContain('src="ch.png"');
     });
 
     it("Renders the user full name", async () => {
@@ -41,11 +42,6 @@ describe('<UserBadge />',()=>{
     it("Renders the e-mail", async () => {
         expect(wrapper.find(".email").length).toBe(1);
         expect(wrapper.find(".email").html()).toEqual(`<div class="email">${fakeUser.email}</div>`);
-    });
-
-    it('getIcon function works correctly',()=>{
-        expect(wrapper.find(".nat-flag").length).toBe(1);
-        expect(wrapper.find(".nat-flag").html()).toContain('src="ch.png"');
     });
 
 });
