@@ -58,8 +58,8 @@ const UserList = (props:any) => {
     const preFetchUsers = async (page:number) => {
 
         //Shows the loading indicator for the prefetch while is showing the prefetched list
-        //Uncomment if you want to show the loader indicator during prefetch
-        //setIsLoading(true);
+        //Comment/Uncomment if you want to show the loader indicator during prefetch
+        setIsLoading(true);
 
         // Load the users
         let response = await fetchUser(page) as IFetchUserResponse;
@@ -68,7 +68,7 @@ const UserList = (props:any) => {
         setPreFetched(response.results);
 
         //Hide the loading indicator
-        //setIsLoading(false);
+        setIsLoading(false);
     }
 
     // *loadUsers* if you are on the first page loads the first batch of users
