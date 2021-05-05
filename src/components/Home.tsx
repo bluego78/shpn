@@ -4,15 +4,15 @@ import { useContext } from 'react';
 /* IMPORT CONTEXTS */
 import AppContext from '../contexts/AppContext';
 
-
 /* IMPORT CUSTOM COMPONENTS */
 import Loader from './Loader';
 import UserList from './UserList';
 
-export default (props:any) => {
+const Home = (props:any) => {
 
     //Load the context
     const [appContext, setAppContext] = useContext(AppContext);
+
     
     return <div id="home" className="content-fluid d-flex flex-column align-items-center justify-content-center">
                 {appContext.isLoading && appContext.currentPage===0 ? 
@@ -23,3 +23,4 @@ export default (props:any) => {
             </div>
          
 }
+export default Home;

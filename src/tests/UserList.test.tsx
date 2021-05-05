@@ -29,5 +29,8 @@ describe('<UserList />', ()=>{
         expect(component.root.findByProps({className: "users-list"}).children.length).toBe(2);
     });
 
+    it('Renders the modal', ()=>{
+        expect(component.root.findByProps({id: "modal-window"})).toBeTruthy();
+    });
 
 });

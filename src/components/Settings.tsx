@@ -11,7 +11,7 @@ import IUser from '../Interfaces/IUser';
 /* IMPORT CONTEXTS */
 import AppContext from '../contexts/AppContext';
 
-export default () => {
+const Settings = () => {
 
     // *appContext* contains all the shared values between the components
     const [appContext, setAppContext] = useContext(AppContext);
@@ -78,9 +78,11 @@ export default () => {
                     //verify if is checked in the context & the cookie
                     let checked:boolean = appContext.selectedNations.includes(nat);
                     return <div key={i} className="nat-row">
-                        <input type="checkbox" onChange={(e)=>setNationalities(e)} value={nat} checked={checked}/>{natNames[i]} ({nat})
+                        <input id={nat.toLowerCase()} type="checkbox" onChange={(e)=>setNationalities(e)} value={nat} checked={checked}/>{natNames[i]} ({nat})
                         </div>
                 })}
                 <Link to="/home" className="btn btn-primary back-button">back</Link>
             </div>
 }
+
+export default Settings;

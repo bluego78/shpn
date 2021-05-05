@@ -1,8 +1,10 @@
 
 import { MockedContextState } from '../contexts/MockAppContext';
 import Settings from '../components/Settings';
-import renderer from 'react-test-renderer';
+import renderer, { act } from 'react-test-renderer';
 import { BrowserRouter as Router } from "react-router-dom";
+import Cookies from 'js-cookie';
+import { EventEmitter } from 'stream';
 
 let component:any;
 

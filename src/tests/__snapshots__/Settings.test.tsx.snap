@@ -15,6 +15,7 @@ exports[`<Settings /> Renders properly 1`] = `
   >
     <input
       checked={false}
+      id="ch"
       onChange={[Function]}
       type="checkbox"
       value="CH"
@@ -29,6 +30,7 @@ exports[`<Settings /> Renders properly 1`] = `
   >
     <input
       checked={false}
+      id="es"
       onChange={[Function]}
       type="checkbox"
       value="ES"
@@ -43,6 +45,7 @@ exports[`<Settings /> Renders properly 1`] = `
   >
     <input
       checked={false}
+      id="fr"
       onChange={[Function]}
       type="checkbox"
       value="FR"
@@ -57,6 +60,7 @@ exports[`<Settings /> Renders properly 1`] = `
   >
     <input
       checked={false}
+      id="gb"
       onChange={[Function]}
       type="checkbox"
       value="GB"

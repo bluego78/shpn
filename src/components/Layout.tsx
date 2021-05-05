@@ -2,7 +2,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route, Link
+    Route
 } from "react-router-dom";
 
 
@@ -12,7 +12,7 @@ import Home from './Home';
 import Settings from './Settings';
 
 
-export default (props:any) => {
+const Layout = (props:any) => {
 
     return (
         <div className="layout">
@@ -27,3 +27,4 @@ export default (props:any) => {
         </div>
     );
 }
+export default Layout;

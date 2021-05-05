@@ -28,4 +28,5 @@ describe('<NavBar />', ()=>{
         expect(component.root.findByProps({className: "gear-icon"})).toBeTruthy();
     });
     
+    
 }); 

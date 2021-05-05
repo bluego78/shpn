@@ -11,7 +11,7 @@ import IAppContext from '../Interfaces/IAppContext';
 import Loader from './Loader';
 import Layout from './Layout';
 
-export default () => {
+const App = () => {
 
     //Load the context and set it into the state
     const [appContext, setAppContext] = useState(useContext(AppContext) as IAppContext);
@@ -26,3 +26,5 @@ export default () => {
                 </div>
             </AppContext.Provider>
 }
+
+export default App;

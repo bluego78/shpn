@@ -1,7 +1,7 @@
 /* IMPORT CSS */
 import '../scss/Loader.scss';
 
-export default (props:any) => {
+const Loader = (props:any) => {
     return <div className="loader">
                 <div className="loader-badge">
                     <div className="spinner-border spinner-border-sm text-light" role="status">
@@ -11,3 +11,4 @@ export default (props:any) => {
                 </div>
             </div>
 }
+export default Loader;

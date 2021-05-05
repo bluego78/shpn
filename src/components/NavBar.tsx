@@ -14,7 +14,7 @@ import AppContext from '../contexts/AppContext';
 import IUser from '../Interfaces/IUser';
 
 
-export default () => {
+const NavBar = () => {
 
     // *appContext* contains all the shared values between the components
     const [appContext, setAppContext] = useContext(AppContext);
@@ -35,7 +35,6 @@ export default () => {
       if(theValue !== "")
       {
           filterIsActive = true;
-          let regex = new RegExp(`/^${e.target.value.toLowerCase()}*$/`);
           //this filters searching into the first OR lastname
           newFilteredUserList = newFilteredUserList.filter((user:IUser)=> user.name.first.toLowerCase().startsWith(theValue) || user.name.last.toLowerCase().startsWith(theValue));
           // if you want to filter on first+last do this:
@@ -58,3 +57,5 @@ export default () => {
               </div>
             </div>
 }
+
+export default NavBar;

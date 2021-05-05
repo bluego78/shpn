@@ -21,7 +21,7 @@ import Message from './Message';
 /* IMPORT HELPERS */
 import { fetchUser } from '../helpers/Fetch';
 
-export default (props:any) => {
+const UserList = (props:any) => {
 
     // *isLoading* indicates if is doing a call
     const [isLoading, setIsLoading] = useState(false);
@@ -127,10 +127,10 @@ export default (props:any) => {
          }
       }
 
-      const openUserModal = (user:IUser) => {
+    const openUserModal = (user:IUser) => {
         setAppContext({...appContext, modalIsOpened:true});
         setUserSelected(user);
-      }
+    }
       
     useEffect(()=>{
         // To await an async function into the useEffect you have to nested it 
@@ -161,6 +161,7 @@ export default (props:any) => {
                 </div>
 
                 <Modal
+                    id="modal-window"
                     isOpen={appContext.modalIsOpened}
                     /*onAfterOpen={afterOpenModal}
                     onRequestClose={closeModal}*/
@@ -202,3 +203,5 @@ export default (props:any) => {
                 </Modal>
             </Fragment>
 }
+
+export default UserList;
